@@ -47,16 +47,25 @@ The following represents general design guidelines. Furthermore, it is encourage
 
 ## Product Backlog
 
-[] - Gather requirements and research project - 1/2/3 = 2
-[] - Project description and estimation - 1/1/2 = 1,3
-[] - Figma mockup of website - 2/3/4 = 3
-[] - Set up dev environment - 1/1/2 = 1,3
-[] - Frontpage showcasing genres - 1/3/5 = 3
-[] - Genre page showing all movies from a gerne - 1/2/3 = 2
-[] - Movie page - showing all information about a movie - 1/2/4 = 3,3
-[] - Wishlist page - showing all movies from user wishlist - 2/3/5 = 3,3
-[] - Design/styling in Tailwind CSS - 5/8/11 = 6
-[] - Bug fixes, refactoring, adding additional features - 5/10/18 = 11
+- [ ] Gather requirements and research project - 1/2/3 = 2
+
+- [ ] Project description and estimation - 1/1/2 = 1,3
+
+- [ ] Figma mockup of website - 2/3/4 = 3
+
+- [ ] Set up dev environment - 1/1/2 = 1,3
+
+- [ ] Frontpage showcasing genres - 1/3/5 = 3
+
+- [ ] Genre page showing all movies from a gerne - 1/2/3 = 2
+
+- [ ] Movie page - showing all information about a movie - 1/2/4 = 3,3
+
+- [ ] Wishlist page - showing all movies from user wishlist - 2/3/5 = 3,3
+
+- [ ] Design/styling in Tailwind CSS - 5/8/11 = 6
+
+- [ ] Bug fixes, refactoring, adding additional features - 5/10/18 = 11
 
 Total 20/35/57 = 37,3
 
@@ -88,6 +97,4 @@ The data for the website comes from a middleware service hosted at Postman - it 
 
 
 ## Project Wiki
-
-
 
