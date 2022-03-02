@@ -21,7 +21,6 @@ The website use a simple API which represents the middleware between the website
     - Presenting all movies with their title and cover.
         - The user should be able to click the movie and be redirected to a page showing all information about it.
     - **Optional**: Pagination based presentation of all the movies. (For faster loading)
-        - **Hint**: Permanent persistence is not required, but would of course be optimal. Saving the list in session is acceptable.
 - #### A page presenting all information available about a movie.
     - The following data needs to be visible on the page:
         - Title
@@ -32,6 +31,7 @@ The website use a simple API which represents the middleware between the website
         - Genre
         - Actors and Directors
         - **Optional**: A embedded video player for playing the Youtube trailer attached to the movie
+        - **Add on**: Show related movies
     - The user should be allowed to add and delete movies from his wishlist.
     - **Hint**: Permanent persistence is not required, but would of course be optimal. Saving the list in session is acceptable.
 - #### A page presenting all movies on the users wishlist.
@@ -47,11 +47,11 @@ The following represents general design guidelines. Furthermore, it is encourage
 
 ## Product Backlog
 
-- [ ] Gather requirements and research project - 1/2/3 = 2
+- [X] Gather requirements and research project - 1/2/3 = 2
 
-- [ ] Project description and estimation - 1/1/2 = 1,3
+- [X] Project description and estimation - 1/1/2 = 1,3
 
-- [ ] Figma mockup of website - 2/3/4 = 3
+- [X] Figma mockup of website - 2/3/4 = 3
 
 - [ ] Set up dev environment - 1/1/2 = 1,3
 
@@ -93,6 +93,8 @@ The data for the website comes from a middleware service hosted at Postman - it 
 [Vercel](https://www.vercel.com) - deployin and hosting
 
 [MyHours](https://www.myHours.com) - Time tracking service
+
+[Figme](https://www.figma.com/file/gXmVXnRIUWOJg6STsF318u/movieWebsite?node-id=1%3A2) - Mock ups and design system for the website
 
 
 
