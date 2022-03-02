@@ -53,7 +53,7 @@ The following represents general design guidelines. Furthermore, it is encourage
 
 - [X] Figma mockup of website - 2/3/4 = 3
 
-- [ ] Set up dev environment - 1/1/2 = 1,3
+- [X] Set up dev environment - 1/1/2 = 1,3
 
 - [ ] Frontpage showcasing genres - 1/3/5 = 3
 
