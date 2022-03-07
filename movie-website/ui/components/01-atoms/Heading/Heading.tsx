@@ -9,7 +9,7 @@ interface HeadingProps {
 
 }
 
-export const HeadingProps: React.FC<HeadingProps> = ({children, tag, type}) => 
+export const Heading: React.FC<HeadingProps> = ({children, tag, type}) => 
 React.createElement(
     tag, 
     {className: classNames(styles.Heading, styles[`Heading___${type}`])},
