@@ -15,9 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ navItems }) => {
                 <ul className={styles.list}>
                     {navItems.map((item, index) => {
                         return (
-                            <NavItem tag={"p"} key={index}>
-                                {item.text}
-                            </NavItem>
+                            <NavItem key={index} item={item}/>
                         );
                     })}
                 </ul>

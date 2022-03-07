@@ -1,10 +1,16 @@
+import Link from "next/link";
 import React from "react";
 import styles from "./NavItem.module.css";
 
 export interface NavItemProps {
-    children: React.ReactNode;
-    tag: "p";
+    item: Models.NavItem;
 }
 
-export const NavItem: React.FC<NavItemProps> = ({ children, tag }) =>
-    React.createElement(tag, { className: styles.navItem }, children);
+export const NavItem: React.FC<NavItemProps> = ({ item }) => {
+    return (
+        <Link href={item.path} passHref>
+            <p>{item.text}</p>
+        </Link>
+    )
+}
+
