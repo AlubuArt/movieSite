@@ -4,7 +4,7 @@ import styles from './Heading.module.css';
 
 interface HeadingProps {
     children: React.ReactNode;
-    type: 'h1' | 'h2' | 'h3';
+    type: 'h1' | 'h2' | 'h3' | 'CarouselItem';
     tag: 'h1' | 'h2' | 'h3';
 
 }

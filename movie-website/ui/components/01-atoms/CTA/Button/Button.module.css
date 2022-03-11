@@ -1,5 +1,5 @@
 .Button {
-    border: 0;
+    border: 2px solid #ffffff;
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
     line-height: 19px;
@@ -8,7 +8,6 @@
     margin-right: 1rem;
     margin-top: 1rem;
     border-radius: 1.5rem;
-    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.536);
     cursor: pointer;
 }
 

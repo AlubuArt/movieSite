@@ -9,7 +9,7 @@ interface MainLayoutProps {
 
 export const MainLayout: React.FC<any> = ({children}) => {
     return (
-        <div className={styles.LayoutContent}>
+        <div className={styles.Layout}>
             <Header navItems={[{text: 'Home', path: '/'}, {text: 'Genres', path: 'genrepage'}, {text: 'Wishlist', path: 'wishlist'}]} />
             {children}
         </div>

@@ -1,0 +1,23 @@
+.MovieInfoCard {
+    position: absolute;
+    width: 30%;
+    left: 10%;
+    color: #ffffff;
+    padding-top: 10rem;
+
+}
+
+.MovieCardTitle {
+    margin-bottom: 2rem;
+
+}
+
+.MovieCardButtons {
+    margin-bottom: 2rem;
+
+}
+
+.MovieCardDescription {
+    margin-bottom: 2rem;
+
+}

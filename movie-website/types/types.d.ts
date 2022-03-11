@@ -9,7 +9,7 @@ declare namespace Models {
         title: string;
         description: string;
         releaseYear: number;
-        cover: [];
+        cover: any[];
         backdrop: string;
         genre: string;
         actors: string[];
