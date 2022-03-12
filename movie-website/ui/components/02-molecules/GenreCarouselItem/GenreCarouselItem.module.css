@@ -1,4 +1,4 @@
-.CarouselItem {
+.GenreCarouselItem {
     aspect-ratio: 16 / 9;
     background-color: magenta;
     position: relative;
@@ -6,7 +6,7 @@
     scroll-snap-align: center;
 }
 
-.CarouselItemTitle {
+.GenreCarouselItemTitle {
     position: absolute;
     top: 60%;
     background-color: darkslategrey;

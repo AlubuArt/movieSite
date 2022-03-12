@@ -1,0 +1,22 @@
+.Carousel {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    flex-flow: nowrap !important;
+    cursor: grab;
+    scroll-snap-type: x mandatory;
+}
+
+.CarouselWrapper {
+    height: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.CarouselItem {
+    display: flex;
+    border-radius: 10px;
+    height: 100%;
+    scroll-snap-align: center;
+    text-align: center;
+}
