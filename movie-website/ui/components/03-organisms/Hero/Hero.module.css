@@ -1,0 +1,7 @@
+.wrapper {
+    display: inline-flex;
+    position: relative;
+    padding-bottom: 4rem;
+    width: 100%;
+    max-height: 100vh
+}

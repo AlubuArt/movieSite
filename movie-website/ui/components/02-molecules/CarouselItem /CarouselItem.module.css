@@ -1,0 +1,14 @@
+.CarouselItem {
+    aspect-ratio: 16 / 9;
+    background-color: magenta;
+    position: relative;
+    width: 265px;
+    scroll-snap-align: center;
+}
+
+.CarouselItemTitle {
+    position: absolute;
+    top: 60%;
+    background-color: darkslategrey;
+    padding: 5px;
+}
