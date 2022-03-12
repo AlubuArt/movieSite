@@ -57,9 +57,9 @@ The following represents general design guidelines. Furthermore, it is encourage
 
 - [X] Frontpage showcasing genres - 1/3 /5 = 3
 
-- [ ] Genre page showing all movies from a gerne - 1/2/3 = 2
+- [X] Genre page showing all movies from a gerne - 1/2/3 = 2
 
-- [ ] Movie page - showing all information about a movie - 1/2/4 = 2,3
+- [X] Movie page - showing all information about a movie - 1/2/4 = 2,3
 
 - [ ] Service layer - API calls - 2/3/5 = 3,3
 
