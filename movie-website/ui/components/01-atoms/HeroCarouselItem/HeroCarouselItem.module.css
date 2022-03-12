@@ -1,0 +1,9 @@
+.HeroCarouselItem {
+    width: 375px;
+    position: relative;
+    scroll-snap-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
