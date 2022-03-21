@@ -3,17 +3,20 @@ import { Carousel } from "../../02-molecules/Carousel/Carousel";
 import styles from "./GenreCarousel.module.css";
 import { Heading } from "../../01-atoms/Heading";
 import { GenreCarouselItem } from "../../02-molecules/GenreCarouselItem";
+import { CarouselTitle } from "../../02-molecules/CarouselTitle/CarouselTitle";
 
 interface GenreCarouselProps {
-    carouselItems: Models.MovieItem[];
+    carouselItems: Models.MovieItem[] | [] ;
+    title: string;
 }
 
 export const GenreCarousel: React.FC<GenreCarouselProps> = ({
     carouselItems,
+    title,
 }) => {
     const wrappedChildren = useMemo(
         () =>
-            carouselItems.map(
+             carouselItems.map(
                 (carouselItem: Models.MovieItem, index: number) => {
                     return (
                         <GenreCarouselItem
@@ -27,6 +30,7 @@ export const GenreCarousel: React.FC<GenreCarouselProps> = ({
     );
     return (
         <div className={styles.GenreCarousel}>
+            <CarouselTitle>{title}</CarouselTitle>
             <Carousel>{wrappedChildren}</Carousel>
         </div>
     );

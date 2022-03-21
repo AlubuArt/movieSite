@@ -102,3 +102,6 @@ The data for the website comes from a middleware service hosted at Postman - it 
 
 ## Project Wiki
 
+### Movie Genres
+'Crime', 'Thriller', 'Animation', 'Drama', 'Documentary', 'Horror', 'Comedy', 'Action', 'Adventure', 'Kids movies', 'War', 'CPH PIX 2013', 'Science Fiction', 'Premierefilm', 'Classic movies'
+

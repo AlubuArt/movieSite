@@ -15,5 +15,8 @@ declare namespace Models {
         actors: string[];
         directors: string[];
         previewPlayer: string;
+        plprogram$thumbnails: {
+            [string]: { plprogram$url: string };
+        };
     }
 }

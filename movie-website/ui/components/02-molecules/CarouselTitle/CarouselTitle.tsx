@@ -10,7 +10,7 @@ interface CarouselTitleProps {
 export const CarouselTitle: React.FC<CarouselTitleProps> = ({children}) => {
     return (
         <div className={styles.CarouselTitle}>
-            <Heading type={'h2'} tag={'h2'}>{'Action '}{' 175'}</Heading>
+            <Heading type={'h2'} tag={'h2'}>{children}</Heading>
         </div>
     )
 }

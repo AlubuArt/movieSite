@@ -9,7 +9,12 @@ export const Movie = {
     genre: 'Action',
     actors: [''],
     directors: [''],
-    previewPlayer: ''
+    previewPlayer: '',
+    plprogram$thumbnails: {
+            [""]: { plprogram$url: "" }
+        }
 }
 
-export const cover = "https://prod.cdn.bbaws.net/TDC_Blockbuster_-_Production/959/40/Spider_Man_No_Way_Home_Poster.jpg"
+export const cover = "https://prod.cdn.bbaws.net/TDC_Blockbuster_-_Production/959/40/Spider_Man_No_Way_Home_Poster.jpg";
+
+export const MovieGenres = ['Crime', 'Thriller', 'Animation', 'Drama', 'Documentary', 'Horror', 'Comedy', 'Action', 'Adventure', 'Kids movies', 'War', 'CPH PIX 2013', 'Science Fiction', 'Premierefilm', 'Classic movies'];
