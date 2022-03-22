@@ -5,28 +5,25 @@ import { Movie, MovieGenres } from "../lib/movie";
 import { Container } from "../ui/components/04-layouts/Container/Container";
 import { GenreCarousel } from "../ui/components/03-organisms/GenreCarousel/GenreCarousel";
 import { useEffect, useMemo, useState } from "react";
-import {
-    findAllGenres,
-    getGenreItems,
-    getItemsFromGenre,
-} from "../lib/bbService";
+import { findAllGenres, getItemsFromGenre } from "../lib/bbService";
 
 interface FrontPageProps {
     content: [];
 }
 
 const FrontPage: NextPage<FrontPageProps> = ({ content }) => {
-    const [genres, setGenres] = useState(MovieGenres);
-
     const wrappedChildren = useMemo(
         () =>
             content.map(
-                (item: { result: Models.MovieItem[]; genre: string }) => {
+                (
+                    genre: { items: Models.MovieItem[]; genre: string },
+                    key: number
+                ) => {
                     return (
-                        <div>
+                        <div key={key}>
                             <GenreCarousel
-                                carouselItems={item.result}
-                                title={item.genre}
+                                carouselItems={genre.items}
+                                title={genre.genre}
                             />
                         </div>
                     );
@@ -44,7 +41,8 @@ const FrontPage: NextPage<FrontPageProps> = ({ content }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-    const count = 25;
+    const count = 10;
+
     const crime = await getItemsFromGenre("Crime", count, "en", "movie");
     const thriller = await getItemsFromGenre("Thriller", count, "en", "movie");
     const drama = await getItemsFromGenre("Drama", count, "en", "movie");
@@ -65,7 +63,7 @@ export const getStaticProps: GetStaticProps = async () => {
         "movie"
     );
 
-    const allItems = [
+    const content = [
         crime,
         thriller,
         drama,
@@ -76,11 +74,8 @@ export const getStaticProps: GetStaticProps = async () => {
         war,
         scienceFiction,
     ];
-
-    // const items = getGenreItems(MovieGenres, count, "en", "movie")
-
     return {
-        props: { content: allItems },
+        props: { content },
     };
 };
 

@@ -5,7 +5,7 @@ declare namespace Models {
     }
 
     export interface MovieItem {
-        guid: string;
+        id: string;
         title: string;
         description: string;
         releaseYear: number;
@@ -18,5 +18,6 @@ declare namespace Models {
         plprogram$thumbnails: {
             [string]: { plprogram$url: string };
         };
+
     }
 }

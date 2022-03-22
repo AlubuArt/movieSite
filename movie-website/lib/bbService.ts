@@ -51,17 +51,11 @@ export const getItemsFromGenre = async (
         headers: {},
     };
 
-    let result: []
+    let items: []
 
     await axios(config)
     .then(function(response) {
-        result = response.data.entries;
+        items = response.data.entries;
     })
-    return {result, genre}; 
+    return {items, genre}; 
 };
-
-
-export const getGenreItems = async (genres: string[], range: number, lang: string, type:string) => {
-    
-    
-}
