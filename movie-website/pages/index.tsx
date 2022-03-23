@@ -12,6 +12,8 @@ interface FrontPageProps {
 }
 
 const FrontPage: NextPage<FrontPageProps> = ({ content }) => {
+
+    console.log(content)
     const wrappedChildren = useMemo(
         () =>
             content.map(
@@ -24,6 +26,7 @@ const FrontPage: NextPage<FrontPageProps> = ({ content }) => {
                             <GenreCarousel
                                 carouselItems={genre.items}
                                 title={genre.genre}
+                                genrePage={genre.genre}
                             />
                         </div>
                     );

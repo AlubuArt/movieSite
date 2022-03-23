@@ -13,11 +13,8 @@ export const Collection: React.FC<CollectionProps> = ({ collectionItems }) => {
             collectionItems.map(
                 (collectionItem: Models.MovieItem, index: number) => {
                     return (
-                        <div className={styles.CollectionItem}>
-                            <GenreCarouselItem
-                                key={index}
-                                carouselItem={collectionItem}
-                            />
+                        <div key={index} className={styles.CollectionItem}>
+                            <GenreCarouselItem carouselItem={collectionItem} />
                         </div>
                     );
                 }

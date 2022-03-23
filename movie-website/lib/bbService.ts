@@ -38,7 +38,7 @@ export const findAllGenres = async () => {
 };
 //TODO: filter the returned response, ih the call
 export const getItemsFromGenre = async (
-    genre: string,
+    genre: string | string[],
     range: number,
     lang: string,
     type: string
@@ -51,13 +51,14 @@ export const getItemsFromGenre = async (
         headers: {},
     };
 
-    let items: []
+    let item: Models.GenreItem = {items: [], genre: genre}
 
     await axios(config)
     .then(function(response) {
-        items = response.data.entries;
+        item.items = response.data.entries;
+        
     })
-    return {items, genre}; 
+    return item; 
 };
 
 

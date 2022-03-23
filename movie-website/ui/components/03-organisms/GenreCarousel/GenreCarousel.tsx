@@ -5,29 +5,28 @@ import { Heading } from "../../01-atoms/Heading";
 import { GenreCarouselItem } from "../../02-molecules/GenreCarouselItem";
 import { CarouselTitle } from "../../02-molecules/CarouselTitle/CarouselTitle";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 interface GenreCarouselProps {
-    carouselItems: Models.MovieItem[] | [] ;
+    carouselItems: Models.MovieItem[] | [];
     title: string;
+    genrePage: string;
 }
 
 export const GenreCarousel: React.FC<GenreCarouselProps> = ({
     carouselItems,
     title,
+    genrePage,
 }) => {
-
-    
-    const router = useRouter();
+    const slug = genrePage;
     const wrappedChildren = useMemo(
         () =>
-             carouselItems.map(
+            carouselItems.map(
                 (carouselItem: Models.MovieItem, index: number) => {
-                   
                     return (
                         <GenreCarouselItem
                             key={index}
                             carouselItem={carouselItem}
-                            
                         />
                     );
                 }
@@ -35,14 +34,12 @@ export const GenreCarousel: React.FC<GenreCarouselProps> = ({
         [carouselItems]
     );
 
-    const handleClick = () => {
-
-    }
-
-
     return (
         <div className={styles.GenreCarousel}>
-            <CarouselTitle>{title}</CarouselTitle>
+            <CarouselTitle>
+                <Link href={`/genres/${slug}`}>{title}</Link>
+            </CarouselTitle>
+
             <Carousel>{wrappedChildren}</Carousel>
         </div>
     );

@@ -1,14 +1,10 @@
 import React from "react";
 import {
     GetServerSideProps,
-    GetStaticPaths,
-    GetStaticProps,
     NextPage,
 } from "next";
 import { Container } from "../../ui/components/04-layouts/Container/Container";
 import { MovieHero } from "../../ui/components/03-organisms/MovieHero/MovieHero";
-import { Collection } from "../../ui/components/03-organisms/Collection/Collection";
-import { Movie } from "../../lib/movie";
 import { getMovie } from "../../lib/bbService";
 
 interface MoviePageProps {
@@ -20,6 +16,7 @@ const MoviePage: NextPage<MoviePageProps> = ({ movie, relatedMovies }) => {
     return (
         <Container>
             <MovieHero movie={movie} />
+            {/*This is for related movies */}
             {/*  <Collection collectionItems={[Movie, Movie]}/> */}
         </Container>
     );

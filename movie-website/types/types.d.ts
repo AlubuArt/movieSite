@@ -23,4 +23,10 @@ declare namespace Models {
         }
 
     }
+
+
+    export interface GenreItem {
+        genre: string | string[];
+        items: [];
+    }
 }
