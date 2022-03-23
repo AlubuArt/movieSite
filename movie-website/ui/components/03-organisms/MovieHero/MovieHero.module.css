@@ -11,6 +11,7 @@
 
 .Backdrop {
     opacity: 0.7;
+    min-width: 100%;
 }
 
 .MovieHeroInfo {
