@@ -12,6 +12,9 @@ export const Movie = {
     previewPlayer: '',
     plprogram$thumbnails: {
             [""]: { plprogram$url: "" }
+        },
+    plprogram$descriptionLocalized: {
+            en: ''
         }
 }
 

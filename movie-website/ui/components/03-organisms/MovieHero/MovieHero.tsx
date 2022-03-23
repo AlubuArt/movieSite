@@ -15,14 +15,14 @@ export const MovieHero: React.FC<MovieHeroProps> = ({ movie }) => {
                 <img
                     className={styles.Backdrop}
                     src={
-                        "https://prod.cdn.bbaws.net/TDC_Blockbuster_-_Production/973/160/avengers-endgame_appfeatured.jpg"
+                        movie.plprogram$thumbnails["orig-720x1280"]?.plprogram$url
                     }
                 />
 
                 <MovieInfoCard movie={movie} />
 
                 <div className={styles.MovieHeroCover}>
-                    <MovieCover cover={movie.cover} />
+                    <MovieCover cover={movie.plprogram$thumbnails["orig-546x375"]?.plprogram$url} />
                 </div>
             </div>
         </div>

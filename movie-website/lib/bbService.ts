@@ -59,3 +59,24 @@ export const getItemsFromGenre = async (
     })
     return {items, genre}; 
 };
+
+
+export const getMovie = async (id: string | string[]) => {
+
+    const config = {
+        method: 'get',
+        url: `https://feed.entertainment.tv.theplatform.eu/f/jGxigC/bb-all-pas/${id}?form=json`,
+        headers: { }
+      };
+      
+      const data = await axios(config)
+      .then(function (response) {
+        //console.log(JSON.stringify(response.data));
+        return response.data
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+      return data
+}

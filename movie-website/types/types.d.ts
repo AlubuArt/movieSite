@@ -18,6 +18,9 @@ declare namespace Models {
         plprogram$thumbnails: {
             [string]: { plprogram$url: string };
         };
+        plprogram$descriptionLocalized: {
+            en: string;
+        }
 
     }
 }

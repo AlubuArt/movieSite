@@ -22,7 +22,7 @@ export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie }) => {
                 </Heading>
             </div>
             <div className={styles.MovieCardDescription}>
-                <Paragraph tag={"p"}>{movie.description}</Paragraph>
+                <Paragraph tag={"p"}>{movie.plprogram$descriptionLocalized?.en}</Paragraph>
             </div>
             <div className={styles.MovieCardButtons}>
                 <Button onClick={handleClick}>afspil</Button>
