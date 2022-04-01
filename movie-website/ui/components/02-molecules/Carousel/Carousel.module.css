@@ -20,3 +20,17 @@
     scroll-snap-align: center;
     text-align: center;
 }
+
+.Spacing___sm {
+    gap: 0.5rem
+}
+
+.Spacing___md {
+    gap: 1rem;
+}
+
+.Spacing___lg {
+    gap: 1.5rem;
+}
+
+

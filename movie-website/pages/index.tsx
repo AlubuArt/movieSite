@@ -1,25 +1,26 @@
-import Head from "next/head";
 import { GetStaticProps, NextPage } from "next";
 import { Hero } from "../ui/components/03-organisms/Hero";
-import { Movie, MovieGenres } from "../lib/movie";
+import { Movie } from "../lib/movie";
 import { Container } from "../ui/components/04-layouts/Container/Container";
 import { GenreCarousel } from "../ui/components/03-organisms/GenreCarousel/GenreCarousel";
-import { useEffect, useMemo, useState } from "react";
-import { findAllGenres, getItemsFromGenre } from "../lib/bbService";
+import { useMemo } from "react";
+import { getItemsFromGenre, getMovie } from "../lib/bbService";
 
 interface FrontPageProps {
-    content: [];
+    carouselContent: Models.GenreItem[];
+    heroMovie: Models.MovieItem;
 }
 
-const FrontPage: NextPage<FrontPageProps> = ({ content }) => {
-
-    console.log(content)
+const FrontPage: NextPage<FrontPageProps> = ({ carouselContent, heroMovie }) => {
     const wrappedChildren = useMemo(
         () =>
-            content.map(
+            carouselContent.map(
                 (
-                    genre: { items: Models.MovieItem[]; genre: string },
-                    key: number
+                    {...genre},
+                    key
+                    /* items: Models.MovieItem[],
+                    genre: string,
+                    key: number */
                 ) => {
                     return (
                         <div key={key}>
@@ -32,12 +33,14 @@ const FrontPage: NextPage<FrontPageProps> = ({ content }) => {
                     );
                 }
             ),
-        [content]
+        [carouselContent]
     );
+
+    console.log(heroMovie)
 
     return (
         <Container>
-            <Hero movie={Movie} />
+            <Hero movie={heroMovie} />
             {wrappedChildren}
         </Container>
     );
@@ -66,7 +69,9 @@ export const getStaticProps: GetStaticProps = async () => {
         "movie"
     );
 
-    const content = [
+    const heroMovie = await getMovie('106608168011');
+
+    const carouselContent = [
         crime,
         thriller,
         drama,
@@ -77,8 +82,9 @@ export const getStaticProps: GetStaticProps = async () => {
         war,
         scienceFiction,
     ];
+
     return {
-        props: { content },
+        props: { carouselContent, heroMovie },
     };
 };
 

@@ -69,6 +69,27 @@ export const getMovie = async (id: string | string[]) => {
         url: `https://feed.entertainment.tv.theplatform.eu/f/jGxigC/bb-all-pas/${id}?form=json`,
         headers: { }
       };
+      let data: Models.MovieItem;
+      await axios(config)
+      .then(function (response) {
+        //console.log(JSON.stringify(response.data));
+        data = response.data
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+      return data
+}
+
+export const getAllMovies = async () => {
+
+
+    const config = {
+        method: 'get',
+        url: `https://feed.entertainment.tv.theplatform.eu/f/jGxigC/bb-all-pas?form=json&lang=da&byProgramType=movie`,
+        headers: { }
+      };
       
       const data = await axios(config)
       .then(function (response) {
@@ -80,4 +101,5 @@ export const getMovie = async (id: string | string[]) => {
       });
 
       return data
+    
 }

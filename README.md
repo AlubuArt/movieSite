@@ -61,7 +61,7 @@ The following represents general design guidelines. Furthermore, it is encourage
 
 - [X] Movie page - showing all information about a movie - 1/2/4 = 2,3
 
-- [ ] Service layer - API calls - 2/3/5 = 3,3
+- [X] Service layer - API calls - 2/3/5 = 3,3
 
 - [ ] Wishlist page - showing all movies from user wishlist - 2/3/5 = 3,3
 
@@ -80,9 +80,10 @@ NextJS is a good choice for this project because:
 - It requires zero config
 - comes with out of the box TypeScript support
 - has automatic image optimization
-- high data security and SEO effeciency. 
+- high data security and SEO effeciency
+- utilize both static site generation and server side data fetching
 
-The data for the website comes from a middleware service hosted at Postman - it fetch data from feed.entertainment.tv.theplatform and returns a JSON object as response. (Look in the project wiki for response examples)
+The data for the website comes from a middleware service that fetch data from feed.entertainment.tv.theplatform and returns a JSON object as response. (Look in the project wiki for response examples)
 
 [Github](https://www.github.com) will be used as code hosting platform, and [Vercel](https://www.vercel.com) will be used for deploying the website. 
 
@@ -96,9 +97,7 @@ The data for the website comes from a middleware service hosted at Postman - it 
 
 [MyHours](https://www.myHours.com) - Time tracking service
 
-[Figme](https://www.figma.com/file/gXmVXnRIUWOJg6STsF318u/movieWebsite?node-id=1%3A2) - Mock ups and design system for the website
-
-
+[Figma](https://www.figma.com/file/gXmVXnRIUWOJg6STsF318u/movieWebsite?node-id=1%3A2) - Mock ups and design system for the website
 
 ## Project Wiki
 

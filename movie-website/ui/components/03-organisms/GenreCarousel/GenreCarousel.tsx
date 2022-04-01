@@ -9,8 +9,8 @@ import Link from "next/link";
 
 interface GenreCarouselProps {
     carouselItems: Models.MovieItem[] | [];
-    title: string;
-    genrePage: string;
+    title: string | string[];
+    genrePage: string | string[];
 }
 
 export const GenreCarousel: React.FC<GenreCarouselProps> = ({
@@ -40,7 +40,7 @@ export const GenreCarousel: React.FC<GenreCarouselProps> = ({
                 <Link href={`/genres/${slug}`}>{title}</Link>
             </CarouselTitle>
 
-            <Carousel>{wrappedChildren}</Carousel>
+            <Carousel spacing={'md'}>{wrappedChildren}</Carousel>
         </div>
     );
 };
