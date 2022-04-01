@@ -18,8 +18,7 @@ export const HeroCarouselItem: React.FC<HeroCarouselItemProps> = ({
             <div className={styles.HeroCarouselItem}>
                 <img
                     src={
-                        carouselItem.plprogram$thumbnails["orig-546x375"]
-                            .plprogram$url
+                        carouselItem.plprogram$thumbnails["orig-546x375"]?.plprogram$url
                     }
                 ></img>
             </div>
