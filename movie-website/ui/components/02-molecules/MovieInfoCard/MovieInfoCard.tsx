@@ -1,6 +1,4 @@
 import React from "react";
-import classNames from "classnames";
-import { Container } from "../../04-layouts/Container/Container";
 import { Heading } from "../../01-atoms/Heading";
 import { Button } from "../../01-atoms/CTA/Button/Button";
 import { Paragraph } from "../../01-atoms/Paragraph/Paragraph";
