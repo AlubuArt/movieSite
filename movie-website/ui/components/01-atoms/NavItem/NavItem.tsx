@@ -8,8 +8,8 @@ export interface NavItemProps {
 
 export const NavItem: React.FC<NavItemProps> = ({ item }) => {
     return (
-        <Link href={item.path} passHref>
-            <p>{item.text}</p>
+        <Link  href={item.path} passHref>
+            <p className={styles.navItem}>{item.text}</p>
         </Link>
     )
 }

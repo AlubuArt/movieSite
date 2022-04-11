@@ -1,6 +1,5 @@
 .wrapper {
     display: inline-flex;
-    padding-bottom: 4rem;
     min-width: 100%;
     background-color: darkslategrey;
 }
