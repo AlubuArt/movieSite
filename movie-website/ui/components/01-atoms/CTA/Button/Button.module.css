@@ -1,29 +1,34 @@
 .Button {
-    border: 2px solid #ffffff;
+    
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 19px;
-    font-weight: 500;
-    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    padding: 0.8rem 1.8rem;
     margin-right: 1rem;
     margin-top: 1rem;
-    border-radius: 1.5rem;
     cursor: pointer;
+    letter-spacing: 0.03rem;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 .Button___primary {
-    background-color: rgb(28, 156, 173);
-    color: #ffffff;
-    margin-right: 0px;
+    background-color: #cf3d3d;
+    margin-right: 10px;
+    border: 3px solid #cf3d3d ;
 }
 
 .Button___secondary {
-    background-color: rgb(28, 156, 173);
     color: #ffffff;
+    border: 3px solid white;
+    background-color:#323232ad;
 }
 
 .Button___wishlist {
     color: #ffffff;
-    border-radius: 50%;
+    border-radius: 20px;
+    background-color:#323232ad;
+    border: 3px solid white;
 
 }

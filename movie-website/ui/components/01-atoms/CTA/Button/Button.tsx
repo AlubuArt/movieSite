@@ -4,13 +4,13 @@ import classNames from "classnames";
 export interface ButtonProps {
     children: React.ReactNode;
     onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
-    style?: "primary" | "secondary" | 'wishlist';
+    type?: "primary" | "secondary" | 'wishlist';
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, onClick, style }) => {
+export const Button: React.FC<ButtonProps> = ({ children, onClick, type}) => {
     return (
         <button
-            className={classNames(styles.Button, [styles[`Button___${style}`]])}
+            className={classNames(styles.Button, [styles[`Button___${type}`]])}
             onClick={onClick}
         >
             {children}

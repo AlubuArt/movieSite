@@ -1,7 +1,5 @@
 import React from "react";
-import classNames from "classnames";
 import styles from "./Hero.module.css";
-import { Container } from "../../04-layouts/Container/Container";
 import { MovieInfoCard } from "../../02-molecules/MovieInfoCard/MovieInfoCard";
 
 interface HeroProps {
@@ -12,11 +10,12 @@ export const Hero: React.FC<HeroProps> = ({ movie }) => {
     return (
         <div className={styles.wrapper}>
             <img
+                className={styles.Backdrop}
                 src={
                     movie.plprogram$thumbnails["orig-720x1280"]?.plprogram$url
                 }
             />
-            <div>
+            <div className={styles.MovieInfoCardWrapper}>
                 <MovieInfoCard movie={movie} />
             </div>
         </div>

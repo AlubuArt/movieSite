@@ -1,8 +1,9 @@
 .MovieInfoCard {
     position: absolute;
-    width: 30%;
+    max-width: 40%;
     left: 10%;
     color: #ffffff;
+    top: 20%;
 
 }
 
@@ -17,6 +18,10 @@
 }
 
 .MovieCardDescription {
-    margin-bottom: 2rem;
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
 
 }

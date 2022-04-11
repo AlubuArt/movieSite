@@ -1,16 +1,21 @@
-.MovieHero {
+.wrapper {
     /* display: flex;
     position: relative; */
+
 }
 
 .MovieHeroWrapper {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
+    display: inline-flex;
+    padding-bottom: 4rem;
+    min-width: 100%;
+    background-color: darkslategrey;
 }
 
 
 .Backdrop {
-    opacity: 0.7;
+    opacity: 0.5;
     min-width: 100%;
 }
 
@@ -23,6 +28,7 @@
     position: absolute;
     left: 65%;
     box-shadow: 1;
+    top: 15%;
     -webkit-box-shadow: 0px 0px 26px 14px #000000;
     box-shadow: 0px 0px 26px 14px #000000;
 }

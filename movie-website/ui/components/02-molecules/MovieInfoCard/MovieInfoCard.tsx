@@ -25,8 +25,9 @@ export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie }) => {
                 <Paragraph tag={"p"}>{movie.plprogram$descriptionLocalized?.en}</Paragraph>
             </div>
             <div className={styles.MovieCardButtons}>
-                <Button onClick={handleClick}>afspil</Button>
-                <Button onClick={handleClick}>mere info</Button>
+                <Button onClick={handleClick} type={"primary"}>afspil</Button>
+                <Button onClick={handleClick} type={"secondary"}>mere info</Button>
+                <Button onClick={handleClick} type={"wishlist"}>+</Button>
             </div>
         </div>
     );

@@ -13,11 +13,11 @@ export const Header: React.FC<HeaderProps> = ({ navItems }) => {
             <div className={styles.searchBar}></div>
             <div className={styles.headerItems}>
                 <ul className={styles.list}>
-                    {navItems.map((item, index) => {
-                        return (
+                    {navItems.map((item, index) => (
+                        
                             <NavItem key={index} item={item}/>
-                        );
-                    })}
+                       
+                    ))}
                 </ul>
             </div>
         </div>

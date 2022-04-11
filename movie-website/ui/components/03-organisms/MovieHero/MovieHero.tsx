@@ -10,7 +10,7 @@ interface MovieHeroProps {
 
 export const MovieHero: React.FC<MovieHeroProps> = ({ movie }) => {
     return (
-        <div className={styles.MovieHero}>
+        <div className={styles.wrapper}>
             <div className={styles.MovieHeroWrapper}>
                 <img
                     className={styles.Backdrop}

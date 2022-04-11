@@ -3,7 +3,9 @@
 
 }
 .Heading___h1 {
-    font-size: 40px;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: normal;
 }
 .Heading___h2 {
     font-size: 32px;
