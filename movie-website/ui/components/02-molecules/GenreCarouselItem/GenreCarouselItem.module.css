@@ -1,6 +1,6 @@
 .GenreCarouselItem {
     aspect-ratio: 16 / 9;
-    background-color: magenta;
+    background-color: magenta; /*TODO: Make another fallback, if image is mising for some reason */
     position: relative;
     width: 265px;
     scroll-snap-align: center;
@@ -9,6 +9,6 @@
 .GenreCarouselItemTitle {
     position: absolute;
     top: 60%;
-    background-color: darkslategrey;
+    background-color: #cf3d3d;
     padding: 5px;
 }

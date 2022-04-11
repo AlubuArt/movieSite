@@ -5,6 +5,11 @@
     flex-flow: nowrap !important;
     cursor: grab;
     scroll-snap-type: x mandatory;
+
+    overflow-y: hidden;
+}
+.Carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .CarouselWrapper {
@@ -12,6 +17,8 @@
     display: flex;
     gap: 0.5rem;
 }
+
+
 
 .CarouselItem {
     display: flex;
