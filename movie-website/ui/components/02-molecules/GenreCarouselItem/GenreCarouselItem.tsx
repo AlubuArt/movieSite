@@ -22,8 +22,9 @@ export const GenreCarouselItem: React.FC<GenreCarouselItemProps> = ({
                         carouselItem.plprogram$thumbnails["orig-186x330"]
                             ?.plprogram$url
                     }
+                    className={styles.CarouselItemImage}
                 ></img>
-                <div className={styles.wrapper}>
+                <div className={styles.Wrapper}>
                     <div className={styles.GenreCarouselItemTitle}>
                     <Heading type={"CarouselItem"} tag={"h3"}>
                         {carouselItem.title}
