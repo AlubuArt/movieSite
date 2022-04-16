@@ -1,14 +1,31 @@
 .GenreCarouselItem {
     aspect-ratio: 16 / 9;
-    background-color: magenta; /*TODO: Make another fallback, if image is mising for some reason */
+    background-color: transparent; /*TODO: Make another fallback, if image is mising for some reason */
     position: relative;
-    width: 265px;
+    min-width: 265px;
     scroll-snap-align: center;
 }
 
 .GenreCarouselItemTitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -webkit-padding-end: 5px ;
+    
+
+    
+    
+}
+
+.wrapper{
     position: absolute;
-    top: 60%;
+    top: 80%;
+    min-width: 100%;
+    text-align: left;
     background-color: #cf3d3d;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    
 }

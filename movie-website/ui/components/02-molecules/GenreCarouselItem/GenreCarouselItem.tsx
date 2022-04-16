@@ -23,11 +23,14 @@ export const GenreCarouselItem: React.FC<GenreCarouselItemProps> = ({
                             ?.plprogram$url
                     }
                 ></img>
-                <div className={styles.GenreCarouselItemTitle}>
+                <div className={styles.wrapper}>
+                    <div className={styles.GenreCarouselItemTitle}>
                     <Heading type={"CarouselItem"} tag={"h3"}>
                         {carouselItem.title}
                     </Heading>
                 </div>
+                </div>
+                
             </div>
         </Link>
     );
