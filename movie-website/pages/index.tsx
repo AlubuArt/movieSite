@@ -3,7 +3,7 @@ import { Hero } from "../ui/components/03-organisms/Hero";
 import { Movie } from "../lib/movie";
 import { Container } from "../ui/components/04-layouts/Container/Container";
 import { GenreCarousel } from "../ui/components/03-organisms/GenreCarousel/GenreCarousel";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { getItemsFromGenre, getMovie } from "../lib/bbService";
 
 interface FrontPageProps {
@@ -12,6 +12,11 @@ interface FrontPageProps {
 }
 
 const FrontPage: NextPage<FrontPageProps> = ({ carouselContent, heroMovie }) => {
+
+    //TODO: This is the beginning of the new implementation to make pagnation for the movies in the genres.
+    //Use useSWR (https://swr.vercel.app/) for the clientside fetching of data 
+    /* const [crime, setCrime] = useState(carouselContent[0])
+    const [testArr] = useState([crime]) */
     const wrappedChildren = useMemo(
         () =>
             carouselContent.map(
