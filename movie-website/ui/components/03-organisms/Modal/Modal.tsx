@@ -9,11 +9,8 @@ export interface ModalProps {
 }
 
 export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
-   
-
     const wrappedItems = (title) => {
-        return (
-        movie.plprogram$credits
+        return movie.plprogram$credits
             .filter((item: any) => item.plprogram$creditType === title)
             .map((item: any) => {
                 return (
@@ -21,7 +18,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
                         {item.plprogram$personName}
                     </p>
                 );
-            }));
+            });
     };
     return (
         <div className={styles.ModalWrapper}>
@@ -33,7 +30,9 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
                         </Heading>
                     </div>
                     <div className={styles.ModalDescription}>
-                        <Paragraph tag={"p"}>{movie.plprogram$descriptionLocalized.en}</Paragraph>
+                        <Paragraph tag={"p"}>
+                            {movie.plprogram$descriptionLocalized.en}
+                        </Paragraph>
                     </div>
                 </div>
                 <div className={styles.ModalInfoRight}>
@@ -41,17 +40,27 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
                         <Heading tag={"h3"} type={"h3"}>
                             Director
                         </Heading>
-                        {wrappedItems('director')}
+                        {wrappedItems("director")}
                     </div>
                     <div className={styles.Actors}>
                         <Heading tag={"h3"} type={"h3"}>
-                            actors
+                            Actors
                         </Heading>
-                        {wrappedItems('actor')}
+                        {wrappedItems("actor")}
                     </div>
                 </div>
             </div>
-            <div className={styles.ModalEmbedVideoPlayer}></div>
+            <div className={styles.ModalEmbedVideoPlayer}>
+                <iframe
+                    width="560"
+                    height="315"
+                    src={`https://www.youtube.com/embed/${movie.tdc$youtubeTrailer}`}
+                    title={movie.title}
+                    frameBorder="1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            </div>
         </div>
     );
 };

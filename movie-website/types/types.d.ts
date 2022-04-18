@@ -19,13 +19,13 @@ declare namespace Models {
         plprogram$credits: [
 
         ]
-        previewPlayer: string;
+        tdc$youtubeTrailer: string;
         plprogram$thumbnails: {
             [string]: { plprogram$url: string };
         };
         plprogram$descriptionLocalized: {
             en: string;
-        }
+        };
 
     }
 
