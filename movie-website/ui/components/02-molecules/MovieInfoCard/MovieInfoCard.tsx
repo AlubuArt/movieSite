@@ -21,12 +21,18 @@ export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie }) => {
             </div>
             <div className={styles.dateGenre}>
                 <div className={styles.releaseDate}>
-                    <Heading type={"h3"} tag={"h3"}>
+                    <Heading type={"h3"} tag={"h3"} fontWeight={"thin"}>
                         {movie.plprogram$year}
                     </Heading>
                 </div>
+                <div className={styles.releaseDate}>
+                    <Heading type={"h3"} tag={"h3"} fontWeight={"thin"}>
+                        -
+                    </Heading>
+                </div>
+
                 <div className={styles.genre}>
-                    <Heading type={"h3"} tag={"h3"}>
+                    <Heading type={"h3"} tag={"h3"} fontWeight={"thin"}>
                         {movie.plprogram$tags[0].plprogram$title}
                     </Heading>
                 </div>
