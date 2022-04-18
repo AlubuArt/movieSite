@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Heading } from "../../01-atoms/Heading";
 import { Button } from "../../01-atoms/CTA/Button/Button";
 import { Paragraph } from "../../01-atoms/Paragraph/Paragraph";
@@ -6,9 +6,15 @@ import styles from "./MovieInfoCard.module.css";
 
 interface MovieInfoCardProps {
     movie: Models.MovieItem;
+    handleModal: () => void; 
 }
 
-export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie }) => {
+export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie, handleModal }) => {
+
+
+
+    
+
     const handleClick = () => {
         console.log("clicked!");
     };
@@ -46,7 +52,7 @@ export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie }) => {
                 <Button onClick={handleClick} type={"primary"}>
                     afspil
                 </Button>
-                <Button onClick={handleClick} type={"secondary"}>
+                <Button onClick={handleModal} type={"secondary"}>
                     mere info
                 </Button>
                 <Button onClick={handleClick} type={"wishlist"}>
