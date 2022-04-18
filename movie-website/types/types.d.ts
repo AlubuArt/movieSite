@@ -8,10 +8,15 @@ declare namespace Models {
         id: string;
         title: string;
         description: string;
-        releaseYear: number;
+        plprogram$year: number;
         cover: string;
         backdrop: string;
         genre: string;
+        plprogram$tags: [{
+            plprogram$title: string;
+        }];
+            
+        
         actors: string[];
         directors: string[];
         previewPlayer: string;

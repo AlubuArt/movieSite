@@ -8,8 +8,19 @@
 }
 
 .MovieCardTitle {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 
+}
+
+.dateGenre {
+    display: flex; 
+}
+
+.releaseDate {
+    margin-right: 1rem; 
+}
+
+.genre {
 }
 
 .MovieCardButtons {

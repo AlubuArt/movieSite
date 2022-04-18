@@ -19,13 +19,33 @@ export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie }) => {
                     {movie.title}
                 </Heading>
             </div>
+            <div className={styles.dateGenre}>
+                <div className={styles.releaseDate}>
+                    <Heading type={"h3"} tag={"h3"}>
+                        {movie.plprogram$year}
+                    </Heading>
+                </div>
+                <div className={styles.genre}>
+                    <Heading type={"h3"} tag={"h3"}>
+                        {movie.plprogram$tags[0].plprogram$title}
+                    </Heading>
+                </div>
+            </div>
             <div className={styles.MovieCardDescription}>
-                <Paragraph tag={"p"}>{movie.plprogram$descriptionLocalized?.en}</Paragraph>
+                <Paragraph tag={"p"}>
+                    {movie.plprogram$descriptionLocalized?.en}
+                </Paragraph>
             </div>
             <div className={styles.MovieCardButtons}>
-                <Button onClick={handleClick} type={"primary"}>afspil</Button>
-                <Button onClick={handleClick} type={"secondary"}>mere info</Button>
-                <Button onClick={handleClick} type={"wishlist"}>+</Button>
+                <Button onClick={handleClick} type={"primary"}>
+                    afspil
+                </Button>
+                <Button onClick={handleClick} type={"secondary"}>
+                    mere info
+                </Button>
+                <Button onClick={handleClick} type={"wishlist"}>
+                    +
+                </Button>
             </div>
         </div>
     );
