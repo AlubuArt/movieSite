@@ -7,14 +7,14 @@
   left: 50%;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  border-radius: 10px
+  border-radius: 10px;
 }
 
 .ModalContainer {
   position: relative;
   height: 100%;
   padding-left: 2rem;
-  padding-right: 2rem; 
+  padding-right: 2rem;
 }
 
 .ModalInfo {
@@ -44,11 +44,28 @@
   padding-bottom: 1rem;
 }
 
+.Title {
+  background-color: #cf3d3d;
+  padding-left: 1.1rem;
+}
+
 .Actors {
+  margin-bottom: 1rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
+}
+
+.ReleaseYearAndGenre {
+  display: flex;
+}
+
+.ReleaseYear {
+  margin-right: 1rem;
+}
+
+.Title {
 }
 
 .ListItems {

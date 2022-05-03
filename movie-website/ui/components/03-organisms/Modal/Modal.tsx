@@ -35,6 +35,20 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
               <Heading tag={'h2'} type={'h2'}>
                 {movie.title}
               </Heading>
+              <div className={styles.ReleaseYearAndGenre}>
+                  <div className={styles.ReleaseYear}>
+                      
+                <Heading tag={'h3'} type={'h3'} fontWeight={'thin'}>
+                  {movie.plprogram$year}
+                </Heading>
+                  </div>
+                <div className={styles.Genre}>
+
+                <Heading tag={'h3'} type={'h3'} fontWeight={'thin'}>
+                  {movie.plprogram$tags[0].plprogram$title}
+                </Heading>
+                </div>
+              </div>
             </div>
             <div className={styles.ModalDescription}>
               <Paragraph tag={'p'}>{movie.plprogram$descriptionLocalized.en}</Paragraph>
@@ -42,15 +56,20 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
           </div>
           <div className={styles.ModalInfoRight}>
             <div className={styles.Director}>
-              <Heading tag={'h3'} type={'h3'}>
-                Director
-              </Heading>
-              {wrappedItems('director')}
+              <div className={styles.Title}>
+                <Heading tag={'h3'} type={'h3'}>
+                  Director
+                </Heading>
+              </div>
+
+              <div>{wrappedItems('director')}</div>
             </div>
             <div className={styles.Actors}>
-              <Heading tag={'h3'} type={'h3'}>
-                Actors
-              </Heading>
+              <div className={styles.Title}>
+                <Heading tag={'h3'} type={'h3'}>
+                  Actors
+                </Heading>
+              </div>
               {wrappedItems('actor')}
             </div>
           </div>

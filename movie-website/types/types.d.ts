@@ -12,9 +12,9 @@ declare namespace Models {
         cover: string;
         backdrop: string;
         genre: string;
-        plprogram$tags: [{
+        plprogram$tags: {
             plprogram$title: string;
-        }];
+        };
             
         plprogram$credits: [
 
