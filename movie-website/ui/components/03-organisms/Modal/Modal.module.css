@@ -1,45 +1,65 @@
 .ModalWrapper {
-    background-color: rgb(23, 22, 22);
-    width: 40vw;
-    height: 80vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
+  background-color: rgb(23, 22, 22);
+  width: 40vw;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  border-radius: 10px
 }
 
-.ModalInfo{
-    margin: 1rem;
-    width: 100%;
-    display:flex;
-    gap: 4rem
+.ModalContainer {
+  position: relative;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem; 
+}
+
+.ModalInfo {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  padding: 1rem;
 }
 .ModalInfoLeft {
-flex: 3;
-padding-top: 0.5rem; 
-
-
+  flex: 3;
+  padding-top: 0.5rem;
 }
 
 .ModalInfoRight {
-flex: 2;
-padding: 0.5rem;
+  flex: 2;
+  padding: 0.5rem;
+}
 
+.ModalDescription {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
 }
 
 .Director {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
-.ListItems{
-    color: white;
-    margin: 0.5rem;
-    font-size: 14px;
+.Actors {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
 
-.ModalEmbedVideoPlayer{
-    margin: 1rem;
-    text-align: center;
+.ListItems {
+  color: white;
+  margin: 0.5rem;
+  font-size: 14px;
 }
 
+.ModalEmbedVideoPlayer {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

@@ -26,6 +26,7 @@ declare namespace Models {
         plprogram$descriptionLocalized: {
             en: string;
         };
+        plprogramavailability$media: []
 
     }
 

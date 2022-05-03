@@ -9,6 +9,16 @@ export interface ModalProps {
 }
 
 export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
+  // TODO: Probaly check if this is sufficient. Make a default fallback video or meassage, if no video is present.
+  const videoPlayer = (movie) => {
+    if (movie.plprogramavailability$media.length > 1) {
+      console.log(movie.plprogramavailability$media[1].plmedia$publicUrl);
+      return movie.plprogramavailability$media[1].plmedia$publicUrl;
+    } else {
+      return '';
+    }
+  };
+
   const wrappedItems = (title) => {
     return movie.plprogram$credits
       .filter((item: any) => item.plprogram$creditType === title)
@@ -18,44 +28,44 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
   };
   return (
     <div className={styles.ModalWrapper}>
-      <div className={styles.ModalInfo}>
-        <div className={styles.ModalInfoLeft}>
-          <div className={styles.ModalTitle}>
-            <Heading tag={'h2'} type={'h2'}>
-              {movie.title}
-            </Heading>
+      <div className={styles.ModalContainer}>
+        <div className={styles.ModalInfo}>
+          <div className={styles.ModalInfoLeft}>
+            <div className={styles.ModalTitle}>
+              <Heading tag={'h2'} type={'h2'}>
+                {movie.title}
+              </Heading>
+            </div>
+            <div className={styles.ModalDescription}>
+              <Paragraph tag={'p'}>{movie.plprogram$descriptionLocalized.en}</Paragraph>
+            </div>
           </div>
-          <div className={styles.ModalDescription}>
-            <Paragraph tag={'p'}>
-              {movie.plprogram$descriptionLocalized.en}
-            </Paragraph>
+          <div className={styles.ModalInfoRight}>
+            <div className={styles.Director}>
+              <Heading tag={'h3'} type={'h3'}>
+                Director
+              </Heading>
+              {wrappedItems('director')}
+            </div>
+            <div className={styles.Actors}>
+              <Heading tag={'h3'} type={'h3'}>
+                Actors
+              </Heading>
+              {wrappedItems('actor')}
+            </div>
           </div>
         </div>
-        <div className={styles.ModalInfoRight}>
-          <div className={styles.Director}>
-            <Heading tag={'h3'} type={'h3'}>
-              Director
-            </Heading>
-            {wrappedItems('director')}
-          </div>
-          <div className={styles.Actors}>
-            <Heading tag={'h3'} type={'h3'}>
-              Actors
-            </Heading>
-            {wrappedItems('actor')}
-          </div>
+        <div className={styles.ModalEmbedVideoPlayer}>
+          <iframe
+            width="560"
+            height="315"
+            src={videoPlayer(movie)}
+            title={movie.title}
+            frameBorder="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
-      </div>
-      <div className={styles.ModalEmbedVideoPlayer}>
-        <iframe
-          width='560'
-          height='315'
-          src={`https://www.youtube.com/embed/${movie.tdc$youtubeTrailer}`}
-          title={movie.title}
-          frameBorder='1'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-        ></iframe>
       </div>
     </div>
   );
