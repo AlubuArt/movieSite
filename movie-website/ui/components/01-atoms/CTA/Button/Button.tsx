@@ -5,6 +5,7 @@ export interface ButtonProps {
     children: React.ReactNode;
     onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
     type?: "primary" | "secondary" | 'wishlist';
+    className?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({ children, onClick, type}) => {

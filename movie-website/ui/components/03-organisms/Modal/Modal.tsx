@@ -36,17 +36,15 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
                 {movie.title}
               </Heading>
               <div className={styles.ReleaseYearAndGenre}>
-                  <div className={styles.ReleaseYear}>
-                      
-                <Heading tag={'h3'} type={'h3'} fontWeight={'thin'}>
-                  {movie.plprogram$year}
-                </Heading>
-                  </div>
+                <div className={styles.ReleaseYear}>
+                  <Heading tag={'h3'} type={'h3'} fontWeight={'thin'}>
+                    {movie.plprogram$year}
+                  </Heading>
+                </div>
                 <div className={styles.Genre}>
-
-                <Heading tag={'h3'} type={'h3'} fontWeight={'thin'}>
-                  {movie.plprogram$tags[0].plprogram$title}
-                </Heading>
+                  <Heading tag={'h3'} type={'h3'} fontWeight={'thin'}>
+                    {movie.plprogram$tags[0].plprogram$title}
+                  </Heading>
                 </div>
               </div>
             </div>

@@ -13,6 +13,8 @@ export const HeroCarouselItem: React.FC<HeroCarouselItemProps> = ({
     const slug = carouselItem.id.substring(
         carouselItem.id.lastIndexOf("/") + 1
     );
+
+    
     return (
         <Link href={`/movies/${slug}`}>
             <div className={styles.HeroCarouselItem}>
