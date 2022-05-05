@@ -1,5 +1,5 @@
 .HeroCarouselItem {
-    width: 375px;
+    max-height: 100%;
     position: relative;
     scroll-snap-align: center;
     display: flex;
@@ -7,3 +7,22 @@
     justify-content: center;
 }
 
+.HeroCarouselImage {
+    height: 100%;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+.HeroCarouselItem {
+    width: 375px;
+    
+}
+
+.HeroCarouselImage {
+    height: 100%;
+}
+
+
+
+}

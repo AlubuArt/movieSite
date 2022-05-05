@@ -2,6 +2,38 @@
     aspect-ratio: 16 / 9;
     background-color: transparent; /*TODO: Make another fallback, if image is mising for some reason */
     position: relative;
+    width: 170px;
+    scroll-snap-align: center;
+}
+
+.GenreCarouselItemTitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -webkit-padding-end: 5px;
+}
+
+.CarouselItemImage {
+    width: 100%;
+}
+
+.Wrapper {
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    text-align: left;
+    background-color: #cf3d3d;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+}
+@media screen and (min-width: 1200px) {
+
+.GenreCarouselItem {
+    aspect-ratio: 16 / 9;
+    background-color: transparent; /*TODO: Make another fallback, if image is mising for some reason */
+    position: relative;
     min-width: 265px;
     scroll-snap-align: center;
 }
@@ -27,4 +59,5 @@
     padding-right: 5px;
     padding-top: 3px;
     padding-bottom: 1px;
+}
 }
