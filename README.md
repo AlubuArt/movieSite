@@ -63,9 +63,9 @@ The following represents general design guidelines. Furthermore, it is encourage
 
 - [X] Service layer - API calls - 2/3/5 = 3,3
 
-- [ ] Wishlist page - showing all movies from user wishlist - 2/3/5 = 3,3
+- [X] Wishlist page - showing all movies from user wishlist - 2/3/5 = 3,3
 
-- [ ] Design/styling in Tailwind CSS - 5/8/11 = 6
+- [ ] Design/styling in CSS - 5/8/11 = 6
 
 - [ ] Bug fixes, refactoring, adding additional features - 5/10/18 = 11
 
