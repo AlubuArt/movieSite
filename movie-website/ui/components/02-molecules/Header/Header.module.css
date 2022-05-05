@@ -1,3 +1,7 @@
+
+
+
+
 .header {
     background-image: linear-gradient(black 40%, transparent);
     position: fixed;
@@ -25,4 +29,38 @@
     display: flex;
     padding-top: 1rem;
     justify-content: space-evenly;
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .header {
+    background-image: linear-gradient(black 40%, transparent);
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    overflow: hidden;
+    justify-content: right;
+    z-index: 9999;
+}
+
+.logo {
+}
+
+.searchBar {
+}
+
+.headerItems {
+    width: 20%;
+}
+
+.list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+}
 }

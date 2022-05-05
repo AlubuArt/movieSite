@@ -1,38 +1,73 @@
 .MovieInfoCard {
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+    top: 10%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .MovieCardTitle {
+    margin-bottom: 1rem;
+  }
+
+  .dateGenre {
+    display: flex;
+    padding-bottom: 0.5rem;
+  }
+
+  .releaseDate {
+    margin-right: 1rem;
+  }
+
+  .genre {
+  }
+
+  .MovieCardButtons {
+    margin-bottom: 2rem;
+  }
+
+  .MovieCardDescription {
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
+
+
+
+@media screen and (min-width: 1200px) {
+  .MovieInfoCard {
     position: absolute;
     max-width: 40%;
     left: 10%;
-    color: #ffffff;
     top: 20%;
+  }
 
-}
-
-.MovieCardTitle {
+  .MovieCardTitle {
     margin-bottom: 0.5rem;
+  }
 
-}
+  .dateGenre {
+    display: flex;
+  }
 
-.dateGenre {
-    display: flex; 
-}
+  .releaseDate {
+    margin-right: 1rem;
+  }
 
-.releaseDate {
-    margin-right: 1rem; 
-}
+  .genre {
+  }
 
-.genre {
-}
-
-.MovieCardButtons {
+  .MovieCardButtons {
     margin-bottom: 2rem;
+  }
 
-}
-
-.MovieCardDescription {
+  .MovieCardDescription {
     overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-
-
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
 }
