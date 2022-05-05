@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Heading } from '../../01-atoms/Heading';
 import { Button } from '../../01-atoms/CTA/Button/Button';
 import { Paragraph } from '../../01-atoms/Paragraph/Paragraph';
@@ -10,9 +10,44 @@ interface MovieInfoCardProps {
 }
 
 export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie, handleModal }) => {
+  const [wishListItems, setWishListItems] = useState([]);
+
   const handleClick = () => {
     console.log('clicked!');
   };
+
+  //Check if the movie is already in the wishlist.
+  const checkIfItemExists = (arr, movie) => {
+    if (arr.find((item) => item.id === movie.id)) {
+      return true;
+    }
+  };
+
+  const addToWishList = () => {
+    if (checkIfItemExists(wishListItems, movie)) {
+      console.log('item already in list');
+      
+    } else {
+      wishListItems.push(movie);
+      console.log('added movie to wishlist');
+      localStorage.setItem('wishListItems', JSON.stringify(wishListItems))
+    }
+
+  };
+
+  //check if there is a wishlist in the localstorage
+  //if no list, make an empty list
+  useEffect(() => {
+    if (!localStorage.getItem('wishListItems')) {
+      localStorage.setItem('wishListItems', JSON.stringify([]));
+    }
+  }, []);
+
+  //when the list is accesible, get the item from the wishlist
+  useEffect(() => {
+    setWishListItems(JSON.parse(localStorage.getItem('wishListItems')));
+  }, []);
+
   return (
     <div className={styles.MovieInfoCard}>
       <div className={styles.MovieCardTitle}>
@@ -48,7 +83,7 @@ export const MovieInfoCard: React.FC<MovieInfoCardProps> = ({ movie, handleModal
         <Button onClick={handleModal} type={'secondary'}>
           mere info
         </Button>
-        <Button onClick={handleClick} type={'wishlist'}>
+        <Button onClick={addToWishList} type={'wishlist'}>
           +
         </Button>
       </div>

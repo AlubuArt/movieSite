@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 export interface ButtonProps {
     children: React.ReactNode;
-    onClick: React.MouseEventHandler<HTMLButtonElement> | undefined;
+    onClick: any;
     type?: "primary" | "secondary" | 'wishlist';
     className?: string;
 }

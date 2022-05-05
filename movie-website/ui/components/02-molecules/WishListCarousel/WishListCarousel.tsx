@@ -6,13 +6,14 @@ import { Heading } from '../../01-atoms/Heading';
 
 interface WishListCarouselProps {
   carouselItems: Models.MovieItem[];
+  removeFromWishList: (wishListItem: any) => void;
 }
 
-export const WishListCarousel: React.FC<WishListCarouselProps> = ({ carouselItems }) => {
+export const WishListCarousel: React.FC<WishListCarouselProps> = ({ carouselItems, removeFromWishList }) => {
   const wrappedChildren = useMemo(
     () =>
       carouselItems.map((carouselItem: Models.MovieItem, index: number) => {
-        return <WishListCarouselItem key={index} carouselItem={carouselItem} />;
+        return <WishListCarouselItem key={index} carouselItem={carouselItem} removeFromWishList={removeFromWishList}/>;
       }),
     [carouselItems]
   );
