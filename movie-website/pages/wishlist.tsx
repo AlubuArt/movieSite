@@ -5,7 +5,7 @@ import { Container } from '../ui/components/04-layouts/Container/Container';
 export interface WishlistProps {}
 
 const WishListPage: React.FC<WishlistProps> = () => {
-  const [wishListItems, setWishListItems] = useState(():any[]=>JSON.parse(localStorage.getItem('favorites')||'[]'));
+  const [wishListItems, setWishListItems] = useState([]);
 
   
 
@@ -16,7 +16,7 @@ const WishListPage: React.FC<WishlistProps> = () => {
   };
 
   useEffect(() => {
-    setWishListItems(JSON.parse(localStorage.getItem('wishListItems')));
+    setWishListItems(JSON.parse(localStorage.getItem('wishListItems')|| '[]'));
   }, []);
 
   return (
