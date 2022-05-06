@@ -2,7 +2,8 @@
     aspect-ratio: 16 / 9;
     background-color: transparent; /*TODO: Make another fallback, if image is mising for some reason */
     position: relative;
-    width: 170px;
+    width:100%;
+    height: 100%;
     scroll-snap-align: center;
 }
 
@@ -14,7 +15,6 @@
 }
 
 .CarouselItemImage {
-    width: 100%;
 }
 
 .Wrapper {

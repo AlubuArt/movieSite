@@ -22,7 +22,8 @@
 .CarouselItem {
     display: flex;
     border-radius: 10px;
-    height: 400px;
+    height: 100%;
+    width: 330px;
     scroll-snap-align: center;
     text-align: center;
 }
