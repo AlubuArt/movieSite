@@ -74,6 +74,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, movie }) => {
         </div>
         <div className={styles.ModalEmbedVideoPlayer}>
           <iframe
+            className={styles.ResponsiveIframe}
             width="560"
             height="315"
             src={videoPlayer(movie)}
