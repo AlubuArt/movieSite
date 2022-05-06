@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Heading } from '../../01-atoms/Heading';
 import { Paragraph } from '../../01-atoms/Paragraph/Paragraph';
 import styles from './Modal.module.css';
