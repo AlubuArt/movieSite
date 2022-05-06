@@ -1,8 +1,7 @@
 .MovieInfoCard {
-    position: relative;
     width: 100%;
     color: #ffffff;
-    top: 10%;
+    top: 50%;
     padding-left: 1rem;
     padding-right: 1rem;
   }

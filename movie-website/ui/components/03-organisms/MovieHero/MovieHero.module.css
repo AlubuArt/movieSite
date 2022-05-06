@@ -1,43 +1,75 @@
-.wrapper {
-    
-
-}
-
 .MovieHeroWrapper {
-    /* display: flex;
-    align-items: center; */
-    display: inline-flex;
-    min-width: 100%;
-    background-color: darkslategrey;
-}
+    overflow: hidden;
+    padding-top: 5rem;
+    display: block;
+    position: relative;
+    height: 100vh;
 
+}
 
 .Backdrop {
     opacity: 0.5;
-    min-width: 100%;
-}
+    height: 100%;
+  }
 
-.MovieHeroInfo {
+  .MovieHeroInfoCard {
+      position: absolute;
+      top: 50%;
+  }
+
+  .MovieHeroCover {
     position: absolute;
-    width: 50%
+    box-shadow: 1;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0);
+    -webkit-box-shadow: 0px 0px 26px 14px #000000;
+    box-shadow: 0px 0px 26px 14px #000000;
+  }
+
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+  }
+
+  .MovieHeroWrapper {
+    display: inline-flex;
+    min-width: 100%;
+    background-color: darkslategrey;
+
+    padding-top: 2rem;
+  }
+
+  .Backdrop {
+    opacity: 0.5;
+    min-width: 100%;
+  }
+
+  .MovieHeroInfoCard {
+    position: static;
 }
 
-.MovieHeroCover {
+  .MovieHeroInfo {
+    position: absolute;
+    width: 50%;
+  }
+
+  .MovieHeroCover {
     position: absolute;
     left: 65%;
     box-shadow: 1;
     top: 15%;
     -webkit-box-shadow: 0px 0px 26px 14px #000000;
     box-shadow: 0px 0px 26px 14px #000000;
-}
+  }
 
-.ModalWrapper {
-    background-color:rgba(4, 3, 3, 0.749);
+  .ModalWrapper {
+    background-color: rgba(4, 3, 3, 0.749);
     width: 99vw;
     height: 100vh;
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-  
+  }
 }

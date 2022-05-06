@@ -22,8 +22,10 @@ export const MovieHero: React.FC<MovieHeroProps> = ({ movie }) => {
     <div className={styles.wrapper}>
       <div className={styles.MovieHeroWrapper}>
         <img className={styles.Backdrop} src={movie.plprogram$thumbnails['orig-720x1280']?.plprogram$url} />
-
-        <MovieInfoCard movie={movie} handleModal={handleModal} />
+        <div className={styles.MovieHeroInfoCard}>
+          <MovieInfoCard movie={movie} handleModal={handleModal} />
+        </div>
+        
 
         <div className={styles.MovieHeroCover}>
           <MovieCover cover={movie.plprogram$thumbnails['orig-546x375']?.plprogram$url} />

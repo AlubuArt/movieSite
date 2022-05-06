@@ -16,7 +16,7 @@ const MoviePage: NextPage<MoviePageProps> = ({ movie, relatedMovies }) => {
     return (
         <Container>
             <MovieHero movie={movie} />
-            {/*This is for related movies */}
+            {/*Placeholder for related movies */}
             {/*  <Collection collectionItems={[Movie, Movie]}/> */}
         </Container>
     );

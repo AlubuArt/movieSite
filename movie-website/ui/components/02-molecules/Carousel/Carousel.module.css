@@ -49,6 +49,10 @@
     display: none;
 }
 
+.CarouselWrapper {
+    gap: 4rem;
+}
+
 
 .CarouselItem {
     display: flex;

@@ -40,7 +40,10 @@ const FrontPage: NextPage<FrontPageProps> = ({ carouselContent, heroMovie }) => 
   return (
     <Container>
       <Hero movie={heroMovie} />
-      {wrappedChildren}
+      
+        {wrappedChildren}
+      
+      
     </Container>
   );
 };

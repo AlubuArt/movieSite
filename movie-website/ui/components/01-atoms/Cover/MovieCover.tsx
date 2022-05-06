@@ -8,7 +8,7 @@ interface MovieCoverProps {
 export const MovieCover: React.FC<MovieCoverProps> = ({ cover }) => {
     return (
         <div className={styles.MovieCover}>
-            <img src={cover}></img>
+            <img className={styles.MovieCoverImage}src={cover}></img>
         </div>
     );
 };

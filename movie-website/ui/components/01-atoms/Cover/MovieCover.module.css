@@ -1,3 +1,13 @@
 .MovieCover {
-    
+    height: 300px;
+}
+
+.MovieCoverImage {
+    height: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+    .MovieCover {
+        height: 100%;
+    }
 }
